@@ -1,0 +1,9 @@
+
+target/
+dbt_packages/
+logs/
+flink-1.18.0/
+flink-1.18.0-bin-scala_2.12.tgz
+data/
+*.duckdb
+*.duckdb.wal

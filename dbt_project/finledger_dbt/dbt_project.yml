@@ -1,0 +1,10 @@
+name: finledger_dbt
+version: 1.0.0
+profile: finledger_dbt
+model-paths: ["models"]
+models:
+  finledger_dbt:
+    silver:
+      +materialized: table
+    gold:
+      +materialized: table
