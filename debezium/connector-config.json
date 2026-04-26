@@ -1,0 +1,18 @@
+{
+  "name": "finledger-postgres-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "admin",
+    "database.password": "secret",
+    "database.dbname": "finledger_oltp",
+    "database.server.name": "finledger",
+    "table.include.list": "public.transactions,public.accounts,public.customers",
+    "plugin.name": "pgoutput",
+    "topic.prefix": "cdc",
+    "transforms": "unwrap",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+    "transforms.unwrap.add.fields": "op,ts_ms"
+  }
+}
