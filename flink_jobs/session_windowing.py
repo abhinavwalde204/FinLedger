@@ -5,7 +5,7 @@ import s3fs
 from confluent_kafka import Consumer
 
 KAFKA_CONF = {
-    'bootstrap.servers': 'localhost:9092',
+    'bootstrap.servers': '127.0.0.1:9092',
     'group.id': 'flink-finledger',
     'auto.offset.reset': 'earliest'
 }
